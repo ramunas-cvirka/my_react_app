@@ -2,15 +2,15 @@ $(document).ready(function() {
   var ref = new Firebase("https://ramunas.firebaseio.com");
   var auth = ref.getAuth();
   if (auth) {
-    $('#login_button').text('sign-out')
+    $('#gplus').addClass('fa-sign-out').removeClass('fa-google-plus');
   }
 });
 
 function auth() {
   var ref = new Firebase("https://ramunas.firebaseio.com");
-  if ($('#login_button').text() === 'sign-out') {
+  if ($('#gplus').hasClass('fa-sign-out')) {
     ref.unauth();
-    $('#login_button').text('sign-in');
+    $('#gplus').addClass('fa-google-plus').removeClass('fa-sign-out');
     Lobibox.notify('info', {
       size: 'mini',
       msg: 'Signed out successfully.'
@@ -23,7 +23,7 @@ function auth() {
       } else {
         type = 'success';
         error = 'Authenticated successfully.';
-        $('#login_button').text('sign-out');
+        $('#gplus').addClass('fa-sign-out').removeClass('fa-google-plus');
       }
       Lobibox.notify(type, {
         size: 'mini',
