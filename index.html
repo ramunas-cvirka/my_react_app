@@ -15,6 +15,38 @@
     <a href="#">Home</a>
     <a href="#">Link 1</a>
     <a href="#">Link 2</a>
+    <div class="w3-dropdown-click">
+      <a onclick="myFunction()">Click Me</a>
+      <div id="Demo" class="w3-dropdown-content w3-card">
+<!--         <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a> -->
+
+        <label class="w3-label w3-small">Tech news</label>
+        <input class="w3-input w3-small" type="text">
+
+        <label class="w3-label w3-small">Quote author</label>
+        <input class="w3-input w3-small" type="text">
+
+        <label class="w3-label w3-small">Daily quote</label>
+        <input class="w3-input w3-small" type="text">
+
+        <select class="w3-select w3-small" name="option">
+          <option value="1" selected>Ruby</option>
+          <option value="2">JavaScript</option>
+          <option value="3">Go</option>
+        </select>
+
+        <label class="w3-label w3-small">Dayly code snippet</label>
+        <textarea class="w3-input w3-small"></textarea>
+
+        <label class="w3-label w3-small">Snippet description</label>
+        <input class="w3-input w3-small" type="text">
+
+        <button class="w3-btn">Submit</button>
+
+      </div>
+    </div>
     <a href="#">Link 3</a>
     <a class="w3-right" href="#" onclick="auth()"><i id="gplus" class="fa fa-google-plus"></i></a>
   </div>
@@ -23,8 +55,8 @@
   <div class="w3-col" style="width:14%">
     <br>
   </div>
-  <div class="w3-col" style="width:24%">
-    <div class="w3-card-4 w3-margin">
+  <div class="w3-col" style="width:24%" id="main">
+ <!--    <div class="w3-card-4 w3-margin">
 
       <header class="w3-container w3-light-grey" style="padding-top: 10px">
         <span class="w3-tag w3-round w3-indigo">7 May, 2016</span>
@@ -42,10 +74,10 @@
       </div>
 
 
-    </div>
+    </div> -->
   </div>
   <div class="w3-col" style="width:24%">
-      <div class="w3-card-4 w3-margin">
+      <!-- <div class="w3-card-4 w3-margin">
 
       <header class="w3-container w3-light-grey">
         <h3>John Doe</h3>
@@ -59,10 +91,10 @@
 
       <button class="w3-btn-block w3-dark-grey">+ Connect</button>
 
-      </div>
+      </div> -->
   </div>
   <div class="w3-col" style="width:24%">
-      <div class="w3-card-4 w3-margin">
+<!--       <div class="w3-card-4 w3-margin">
 
       <header class="w3-container w3-light-grey">
         <h3>John Doe</h3>
@@ -76,64 +108,16 @@
 
       <button class="w3-btn-block w3-dark-grey">+ Connect</button>
 
-      </div>
+      </div> -->
   </div>
   <div class="w3-col" style="width:14%">
     <br>
   </div>
-  <!-- <div class="w3-col l3"><p>m3</p></div> -->
 </div>
 
 
-  <!-- <div class="container--medium"> -->
-
-
-<!--
-    <button id="login_button" class="button" onclick="auth()">sign-in</button>
-    <div id="main"></div> -->
-
-<!--     <div class="field-group">
-      <span class="badge">4th of May, 2016</span>
-      <input class="field" placeholder="Impactful piece of news">
-      <input class="field" placeholder="Wisecrack">
-      <textarea class="field" placeholder="Code Snippet"></textarea>
-      <input class="field" placeholder="Code Description">
-      <button class="button button--ghost-primary button--xsmall">Submit</button>
-    </div> -->
-
-    <!-- <div class="grid__cell"></div> -->
-    <!-- <div class="grid__cell"> -->
-<!--     <div class="card card--higher">
-      <div class="card__content card__content--divider heading">Impactful piece of news</div>
-      <div class="card__content">
-        <p class="paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
-      </div>
-      <div class="card__content card__content--divider heading">Wisecrack</div>
-      <div class="card__content">
-        <pre>
-        <code class="language-ruby">
-          def main_smth(do_, it_)
-            doin_it(do_, it_)
-          end
-        </code>
-        </pre>
-      </div>
-      <div class="card__content card__content--divider heading">Code Snippet</div>
-      <div class="card__content">
-        <p class="paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
-        <p class="paragraph">Lorem ipsum dolor sit amet, feugiat corpora ex eam. Inciderint eloquentiam sea et.</p>
-      </div>
-    </div> -->
-    <!-- </div> -->
-    <!-- <div class="grid__cell"></div> -->
   </div>
-  <!-- Simple header with scrollable tabs. -->
 
-  <!-- <button id="login_button" class="btn btn-primary btn-sm" onclick="auth()">sign-in</button> -->
-
-  <!-- <div id="main"></div> -->
-  <!-- <h1>Unseen tech news site</h1> -->
   <script src="js/jquery.1.11.js"></script>
   <!-- <script src="js/material.js"></script> -->
   <script src="js/lobibox.js"></script>
@@ -143,6 +127,12 @@
   <script src="js/reactfire.js"></script>
   <!-- <script src="js/prism.js"></script> -->
   <script src='main.js'></script>
+
+  <script>
+    function myFunction() {
+        document.getElementById("Demo").classList.toggle("w3-show");
+    }
+  </script>
 
 </body>
 </html>
